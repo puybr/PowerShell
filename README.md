@@ -1,5 +1,12 @@
 # 🚀 PowerShell
 
+# Syntax Rules
+Verb > Object > Noun
+
+```powershel
+Get-Command -Noun service
+```
+
 # Object Properties
 In the programming world, an object’s properties are attributes about the object itself. A **property** could be a _text string_, a _number_, a _timestamp_, or any other descriptive value.
 Whenever we run the `Get-` cmdlet, you are asking the computer to get a a single object or set of objects.
