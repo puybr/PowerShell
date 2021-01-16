@@ -14,6 +14,7 @@ Whenever we run the `Get-` cmdlet, you are asking the computer to get a a single
 ```powershell
 Get-HotFix
 Get-Service -Name Spooler
+Get-Process notepad | Stop-Process
 Get-ComputerInfo -Property WindowsProductId
 ```
 Use `Get-Member` to see an object’s properties and methods
