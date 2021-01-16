@@ -1,6 +1,6 @@
 # 🚀 PowerShell
 
 ## Create File:
-```ps
+```powershell
 New-Item -Path 'C:\Users\Name\Desktop\Create File' -ItemType Directory
 ```
