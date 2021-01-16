@@ -22,6 +22,11 @@ Use `Get-Member` to see an object’s properties and methods
 Get-ComputerInfo | Get-Member
 Get-Service -Name Spooler | Get-Member
 ```
+Kill a process using an object method:
+```powershell
+$task = Get-Process notepad
+$task.Kill()
+```
 
 # File Handling
 ```powershell
