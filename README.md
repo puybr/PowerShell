@@ -1,2 +1,6 @@
-# powershell
-🚀 Personal Repository for PowerShell Scripting
+# 🚀 PowerShell
+
+## Create File:
+```ps
+New-Item -Path 'C:\Users\Name\Desktop\Create File' -ItemType Directory
+```
