@@ -41,3 +41,22 @@ The point is that the dollar sign in `$_.` indicates that `$_.` is a variable. H
 Get-Process | Where-Object {$_.ProcessName -eq 'chrome'}
 "Microsoft.PowerShell.Core", "Microsoft.PowerShell.Host" | ForEach-Object {$_.Split(".")}
 ```
+# Random Password Generator
+```powershell
+function Get-RandomCharacters($length, $characters) {
+$random = 1..$length | ForEach-Object { Get-Random -Maximum $characters.length }
+return [String]$characters[$random]
+
+}
+
+$letters = Get-RandomCharacters -length 8 -characters 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghiklmnoprstuvwxyz'
+$specialcharacters = Get-RandomCharacters -length 3 -characters '!$%&.+'
+$string = $letters + $specialcharacters
+$string = $string.replace(' ', '')
+$arr = $string.ToCharArray()
+$password = $arr | Sort-Object {Get-Random}
+$y = $password -join ' '
+$p = $y.replace(' ', '')
+
+Write-Host $p
+```
