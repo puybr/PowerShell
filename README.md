@@ -62,4 +62,4 @@ Write-Host $p
 ```
 
 # Example:
-* [Broken Mailbox Rules]brokenMailboxRules.ps1)
+* [Broken Mailbox Rules](brokenMailboxRules.ps1)
