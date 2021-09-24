@@ -60,3 +60,6 @@ $p = $y.replace(' ', '')
 
 Write-Host $p
 ```
+
+# Example:
+* [OOP Principles](oopprinciples.md)
