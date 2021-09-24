@@ -61,5 +61,6 @@ $p = $y.replace(' ', '')
 Write-Host $p
 ```
 
-# Example:
+# Examples:
 * [Broken Mailbox Rules](brokenMailboxRules.ps1)
+* [Password Expiry](passwordExpiry.ps1)
