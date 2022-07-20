@@ -61,7 +61,3 @@ $p = $y.replace(' ', '')
 Write-Host $p
 ```
 - - -
-
-# Examples:
-* [Broken Mailbox Rules](brokenMailboxRules.ps1)
-* [Add Active Directory Group](addADGroup.ps1)
