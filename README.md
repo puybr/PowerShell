@@ -64,5 +64,4 @@ Write-Host $p
 
 # Examples:
 * [Broken Mailbox Rules](brokenMailboxRules.ps1)
-* [Password Expiry](passwordExpiry.ps1)
 * [Add Active Directory Group](addADGroup.ps1)
