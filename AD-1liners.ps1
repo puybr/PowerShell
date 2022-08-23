@@ -1,5 +1,3 @@
-Import-Module ActiveDirectory
-
 # # # USEFUL AD ONE LINERS
 
 Search-ADAccount -Lockedout | Unlock-AdAccount -Confirm
