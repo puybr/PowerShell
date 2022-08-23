@@ -1,8 +1,8 @@
 Import-Module ActiveDirectory
-### Get AD users
+### Get AD users $ conver to HTML
 $body = Get-Aduser -filter * -Properties * | ? {$_.PasswordExpired -eq $True} | ConvertTo-Html -Property Name
 
-### SMTP params
+### SMTP params ###
 $SMTPConnection = @{
     From = 'user@domain.org'
     To = 'helpdesk@domain.org'
@@ -13,4 +13,5 @@ $SMTPConnection = @{
     Body = "<html>$body</html>"
 }
 
+# # # SEND # # #
 Send-MailMessage @SMTPConnection -BodyAsHtml
