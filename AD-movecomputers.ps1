@@ -1,13 +1,15 @@
 # Move computer objects to OU
 Import-Module ActiveDirectory
 $computers = import-csv C:\scripts\computers.csv
-Foreach ($computer in $computers) {
-Get-ADComputer $computer.name | Move-ADObject -TargetPath "OU=Taget,DC=local" -Verbose
-}
+
 
 
 # Get all the computers in an OU
 Get-ADcomputer -Filter * -SearchBase "OU=Taget,DC=local" | Sort-Object -Property Name | ft Name
+
+Foreach ($computer in $computers) {
+Get-ADComputer $computer.name | Move-ADObject -TargetPath "OU=Taget,DC=local" -Verbose
+}
 
 
 ## Script to add all computers in ou to an AD group
