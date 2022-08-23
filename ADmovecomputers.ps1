@@ -1,6 +1,6 @@
 # Move computer objects to OU
 Import-Module ActiveDirectory
-$computers = import-csv C:\scripts\computers-to-be-imaged.csv
+$computers = import-csv C:\scripts\computers.csv
 Foreach ($computer in $computers) {
 Get-ADComputer $computer.name | Move-ADObject -TargetPath "OU=Taget,DC=local" -Verbose
 }
