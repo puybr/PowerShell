@@ -12,3 +12,10 @@ Import-PSSession $ExchSession
 New-RemoteMailbox -Name "Mailbox Name" -UserPrincipalName "mailbox@domain.com" -OnPremisesOrganizationalUnit "OU=MailoxOU,OU=Users,OU=Org,DC=domain,DC=local"
 
 Get-Mailbox -Public
+
+#### ARRAY to ADD users to *SHARED* mailbox
+$sharedMailbox = "shared@domain.com"
+$userMailboxes = "Sarah Connor"
+Foreach ($userMailbox in $userMailboxes) { 
+    Add-MailboxPermission -Identity $sharedMailbox -User $userMailbox -AccessRights FullAccess -InheritanceType All -AutoMapping $false
+}
