@@ -1,4 +1,4 @@
-# 🚀 PowerShell
+# 🔋 PowerShell
 
 # Syntax Rules
 Verb > Object > Noun
